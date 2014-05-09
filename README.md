@@ -1,4 +1,4 @@
-{<img src="https://travis-ci.org/tubedude/finance.svg?branch=working" alt="Build Status" />}[https://travis-ci.org/tubedude/finance]
+[![Build Status](https://travis-ci.org/tubedude/finance.svg?branch=working)](https://travis-ci.org/tubedude/finance)
 # FINANCE
 
 a library for financial modelling in Ruby.
