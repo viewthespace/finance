@@ -17,6 +17,7 @@ SPEC = Gem::Specification.new do |s|
   s.add_dependency 'activesupport', '>= 4.0.0'
   s.add_development_dependency "rake"
   s.add_development_dependency 'minitest', '>= 4.7.5'
+  s.add_development_dependency 'coveralls'
 
   s.files = FileList['README.md', 'COPYING', 'COPYING.LESSER', 'HISTORY', 'lib/**/*.rb', 'test/**/*.rb'].to_a
   s.test_files = `git ls-files -- test/*`.split("\n")

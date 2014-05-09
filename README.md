@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/tubedude/finance.svg?branch=working)](https://travis-ci.org/tubedude/finance)
+[![Build Status](https://travis-ci.org/tubedude/finance.svg?branch=working)](https://travis-ci.org/tubedude/finance)[![Code Climate](https://codeclimate.com/github/tubedude/finance.png)](https://codeclimate.com/github/tubedude/finance)
 # FINANCE
 
 a library for financial modelling in Ruby.
