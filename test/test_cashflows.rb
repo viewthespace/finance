@@ -33,7 +33,7 @@ describe "Cashflows" do
   describe "guess " do
     before(:all) do
       @transactions = []
-      @transactions << Transaction.new(-1000, date: Time.new(1957,1,1))
+      @transactions << Transaction.new(-1000, date: '1957-1-1'.to_time(:utc))
       @transactions << Transaction.new(390000, date: Time.new(2013,1,1))
     end
 
@@ -42,7 +42,7 @@ describe "Cashflows" do
     end
 
     it 'should calculate correct rate with new guess (0.1)' do
-      assert_equal D('0.112340'), @transactions.xirr(0.1).apr.round(6)
+      assert_equal D('0.11234'), @transactions.xirr(0.1).apr.round(5)
     end
 
     it 'should not allow non-numeric guesses' do
