@@ -34,7 +34,7 @@ describe "Cashflows" do
     before(:all) do
       @transactions = []
       @transactions << Transaction.new(-1000, date: '1957-1-1'.to_time(:utc))
-      @transactions << Transaction.new(390000, date: Time.new(2013,1,1))
+      @transactions << Transaction.new(390000, date: '2013-1-1'.to_time(:utc))
     end
 
     it "should fail to calculate with default guess (1.0)" do
