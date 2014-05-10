@@ -38,7 +38,7 @@ describe "Cashflows" do
     end
 
     it "should fail to calculate with default guess (1.0)" do
-      assert_equal D('-9999999999998.948'), @transactions.xirr.apr
+      assert_equal D('-9999999999999'), @transactions.xirr.apr.round(0)
     end
 
     it 'should calculate correct rate with new guess (0.1)' do
