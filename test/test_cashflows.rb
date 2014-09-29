@@ -49,6 +49,19 @@ describe "Cashflows" do
       assert_raises(ArgumentError) { @transactions.xirr("error")}
     end
 
+    it 'issue: https://github.com/wkranec/finance/issues/33' do
+      @x=[]
+      @x << Transaction.new(-10000.0, :date => Time.new(2014,4,15,0,0,0))
+      @x << Transaction.new(-10000.0, :date => Time.new(2014,04,16,0,0,0))
+      @x << Transaction.new(305.6, :date => Time.new(2014,05,16, 14,59,0))
+      @x << Transaction.new(9800.07, :date => Time.new(2014,06,15, 23, 59,59))
+      @x << Transaction.new(5052.645, :date => Time.new(2014,06,15, 23, 59,59))
+      assert_equal D("-0.809965"), @x.xirr(-80.0).effective.round(6)
+    end
+
+
   end
 
-end
+
+
+  end
