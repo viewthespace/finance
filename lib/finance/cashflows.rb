@@ -135,7 +135,3 @@ module Finance
     end
   end
 end
-
-class Array
-  include Finance::Cashflow
-end

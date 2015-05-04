@@ -9,13 +9,3 @@ end
 DecNum.context.define_conversion_to(BigDecimal) do |x|
   BigDecimal.new(x.to_s)
 end
-
-class Numeric
-  def to_d
-    if self.instance_of? DecNum
-      self
-    else
-      DecNum self.to_s
-    end
-  end
-end

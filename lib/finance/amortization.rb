@@ -186,11 +186,3 @@ module Finance
     end
   end
 end
-
-class Numeric
-  # @see Amortization#new
-  # @api public
-  def amortize(*rates, &block)
-    Finance::Amortization.new(self, *rates, &block)
-  end
-end
